@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkIsPalindrome(words) {
+            const cleanedWords = words.toLowerCase();
+            
+            const reversedWords = cleanedWords.split('').reverse().join('');
+            
+            return cleanedWords === reversedWords;
+        }
+
+        console.log(checkIsPalindrome("civic")); //true
+        console.log(checkIsPalindrome("hello")); //false
+        console.log(checkIsPalindrome("radar")); //true
+        console.log(checkIsPalindrome("kotak")); //false
+        console.log(checkIsPalindrome("level")); //true
+    </script>
+</body>
+</html>

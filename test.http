@@ -1,0 +1,55 @@
+### index
+GET http://127.0.0.1:8001/api
+
+### language
+GET http://127.0.0.1:8001/api/language
+
+
+### method not allowed
+POST http://127.0.0.1:8001/api/language
+
+### palindrome
+GET http://127.0.0.1:8001/api/palindrome/katak
+### not palindrome
+GET http://127.0.0.1:8001/api/palindrome/kotak
+
+
+### languages
+### index
+GET http://127.0.0.1:8001/api/languages
+
+### create
+POST http://127.0.0.1:8001/api/language
+
+{
+    "language": "Go",
+    "appeared": 2009,
+    "created": ["Robert Griesemer", "Rob Pike", "Ken Thompson"],
+    "functional": true,
+    "objectOriented": false,
+    "relation": {
+        "influencedBy": ["C", "Python", "Pascal", "Smalltalk", "Modula"],
+        "influences": ["Odin", "Crystal", "Zig"]
+    }
+}
+
+### detail
+GET http://127.0.0.1:8001/api/language/0
+
+### update/{id}
+PATCH http://127.0.0.1:8001/api/language/0
+
+{
+    "language": "PHP",
+    "appeared": 2009,
+    "created": ["Robert Griesemer", "Rob Bot", "Ken Tot"],
+    "functional": true,
+    "objectOriented": false,
+    "relation": {
+        "influencedBy": ["C", "Python", "Pascal", "Smalltalk", "Modula"],
+        "influences": ["Odin", "Crystal", "Zig", "Thor"]
+    }
+}
+
+### delete/{id}
+DELETE http://127.0.0.1:8001/api/language/0
